@@ -1,0 +1,116 @@
+<div class="main_container">
+
+  <div class="container60">
+
+    <div class="darkcontainer60">
+
+      <img src="/assets/unilogo.png" class="image">
+
+      <div class="descriptionTopic">
+
+        Venue Reservation System
+
+      </div>
+
+      <div class="descriptionUniversity">
+
+        University of Moratuwa
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+    <div class="container40 mat-elevation-z6">
+
+      <div class="logo">
+
+        <div class="logotext">
+          LOGIN TO YOUR ACCOUNT
+        </div>
+
+      </div>
+
+      <form name="loginForm" [formGroup]="loginForm" novalidate (ngSubmit)="login()">
+      <div class="inputs">
+
+
+        <p>
+          <mat-form-field appearance="outline" style="width: 80%;">
+
+            <mat-label>Username</mat-label>
+
+            <input matInput formControlName="email" class="classusername">
+
+            <mat-icon matSuffix class="secondary-text">person</mat-icon>
+            <mat-error *ngIf="!loginForm.get('email').hasError('required') && loginForm.get('email').hasError('email')">
+              Please enter a valid username
+            </mat-error>
+
+          </mat-form-field>
+        </p>
+
+        <p>
+
+          <mat-form-field appearance="outline" style="width: 80%;">
+
+            <mat-label>Password</mat-label>
+
+
+            <input matInput [type]="hide ? 'text' : 'password'" formControlName="password">
+            <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
+
+            <mat-error>
+              Password is required
+            </mat-error>
+
+          </mat-form-field>
+
+        </p>
+
+        <div class="others">
+
+          <mat-checkbox formControlName="rememberMe" class="remember-me">Remember Me</mat-checkbox>
+
+          <a class="forgot-password" [routerLink]="'/forgotPassword'">
+            Forgot Password?
+          </a>
+
+        </div>
+
+
+
+      </div>
+
+
+    </form>
+
+
+
+      <div class="footer">
+
+        <button mat-raised-button color="accent" class="submit-button" aria-label="LOGIN" (click) = "login()">
+
+          LOGIN
+
+        </button>
+
+        <div class="register" fxLayout="column" fxLayoutAlign="center center">
+
+          <span class="text">Don't have an account?</span>
+
+          <a class="link" [routerLink]="'/signup'">Create an account</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+</div>

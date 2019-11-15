@@ -1,0 +1,66 @@
+import { Injectable } from "@angular/core";
+import { Observable } from 'rxjs';
+import { HttpClient, HttpResponse, HttpHeaders, HttpParams } from '@angular/common/http';
+
+
+@Injectable({
+    providedIn: 'root'
+})
+
+export class UserService {
+
+    public resourceUrl = "api/user/signin"
+    public resourceUrl2 = "api/account"
+
+     httpOptions = {
+        headers: new HttpHeaders({
+            'Content-Type': 'application/json'
+        })
+    };
+
+    testhttpOptions = {
+        headers: new HttpHeaders({
+            'Authorization': 'Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhc2gxMjMiLCJpYXQiOjE1NzM2NDQ3NDksImV4cCI6MTU3MzczMTE0OX0.KxKxV-swWsg6qIyX6OVQ41LYAmBuf3Utf9VJVq0PHGIPbuAvM4P5Rx5gCJLjVy_7Hymmb7KIU7zYHMyNcHJmrg',
+            'Content-Type': 'application/json'
+        })
+    };
+
+
+    constructor(
+        private http: HttpClient
+
+    ) { }
+
+
+    test(tem?): Observable<HttpResponse<any>> {
+
+
+        
+
+        return this.http.get<any>(this.resourceUrl2,this.testhttpOptions);
+    }
+
+
+    // logging(data1): Observable<HttpResponse<any>> {
+
+
+    //     var data = new FormData();
+    //     data.append("grant_type", "password");
+    //     data.append("username", "ashan");
+    //     data.append("password", "asdASD123");
+
+
+
+    //     return this.http.post<any>(this.resourceUrl, body, { headers });
+    // }
+
+
+
+
+
+    login(data): Observable<HttpResponse<any>> {
+
+        return this.http.post<any>(this.resourceUrl, data, {observe : 'response'});
+    }
+
+}

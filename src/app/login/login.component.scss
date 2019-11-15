@@ -1,0 +1,141 @@
+.main_container {
+  height: 100vh;
+  // border: 5px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .container60 {
+    flex: 5;
+    // background-color: aqua;
+    background: url("/assets/uni.jpeg") no-repeat;
+    background-size: cover;
+
+    height: 100%;
+    z-index: -5;
+
+    .darkcontainer60{
+
+      height: 100%;
+      width: 100%;;
+      background-color: rgba(0, 0, 0, 0.65);
+      display: flex;
+      flex-direction: column;
+
+      .image{
+
+        margin-top: 3%;
+        object-fit: cover;
+        height: 30%;
+        width: 30%;
+        object-fit: contain;
+
+      }
+
+      .descriptionTopic{
+
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        font-size: 30px;
+        margin-left: 8%;
+
+      }
+
+      .descriptionUniversity{
+
+        margin-top: 5px;
+        font-family: 'Times New Roman', Times, serif;
+        color: white;
+        font-size: 20px;
+        margin-left: 8%;
+
+      }
+
+    }
+  }
+
+  .container40 {
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    // background-color: rgba(231, 205, 227, 0.87);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 0% 0% 0% 3%;
+  }
+}
+
+.logo {
+  flex: 2;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  letter-spacing: 1px;
+
+  .logotext {
+    margin-top: 34%;
+    width: 100%;
+    font-size: 25px;
+  }
+
+  // background-color: red;
+}
+
+.topic {
+  flex: 2;
+  width: 100%;
+  // background-color: blue;
+}
+
+.inputs {
+  flex: 3;
+  width: 100%;
+  // background-color: pink;
+  display: flex;
+  flex-direction: column;
+}
+
+.others {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  // background-color: purple;
+  font-size: 13px;
+  margin-top: 8px;
+
+  .remember-me {
+    margin-bottom: 16px;
+  }
+
+  .forgot-password {
+    font-size: 13px;
+    font-weight: 600;
+    margin-left: 30%;
+    margin-bottom: 18px;
+    color: rgba(63, 153, 238, 0.842);
+  }
+}
+
+.footer {
+  flex: 2;
+  width: 100%;
+  // background-color: green;
+
+  .submit-button {
+    width: 80%;
+    margin: 16px auto;
+  }
+
+  .register {
+    margin-top: 5%;
+    width: 80%;
+    font-weight: 600;
+
+    .link {
+      // margin-right: 8px;
+      font-size: 15px;
+      color: rgba(63, 153, 238, 0.842);
+    }
+  }
+}

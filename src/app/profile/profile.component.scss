@@ -1,0 +1,160 @@
+.avatar-container {
+  position: absolute;
+  //   top: 92px;
+  border-radius: 50%;
+  padding: 8px;
+  // left: 6%;
+  align-self: center;
+  top: 24%;
+  // background-color: rgba(14, 13, 32, 0.514);
+  z-index: 1;
+
+  .avtar-div {
+    background-color: rgba(12, 11, 37, 0.76);
+    border-radius: 50%;
+    // padding: 5px;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    border-radius: 50%;
+    // background-size: cover;
+    // background-color: rgba(14, 13, 32, 0.514);
+  }
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  .navigationContainer {
+    flex: 3;
+    height: 100vh;
+    max-width: 40vh;
+    // background-color: rgba(0, 0, 0, 0.295);
+    display: flex;
+    flex-direction: column;
+
+    .headcontainer {
+      width: 100%;
+      flex: 1;
+      background-color: rgba(14, 13, 32, 0.932);
+    }
+
+    .detailscontainer {
+      width: 100%;
+      flex: 2;
+      background-color: rgba(14, 13, 32, 0.932);
+      text-align: center;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+
+      .name-container {
+        margin-top: 3%;
+        font-size: 22px;
+      }
+
+      .email-container {
+        margin-top: 5%;
+        font-size: 12px;
+      }
+    }
+
+    .navigationspanelcontainer {
+      width: 100%;
+      flex: 7;
+      background-color: rgba(12, 11, 37, 0.76);
+      // padding: 5%;
+      // padding-right: -5%;
+
+      .textApplicant {
+        padding-left: 8%;
+        margin-top: 30%;
+        color: rgb(247, 247, 247);
+        font-weight: 400;
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .directions {
+        .icons {
+          color: white;
+          // font-weight: 800;
+          font-size: 20px;
+        }
+
+        .lines {
+          color: white;
+          font-weight: 500;
+          font-size: 15px;
+        }
+
+        .mayItem:hover {
+          background-color: rgba(24, 22, 22, 0.137);
+          cursor: pointer;
+
+          .icons {
+            color: white;
+            // font-weight: 800;
+            font-size: 20px;
+          }
+
+          .lines {
+            color: white;
+            font-weight: 500;
+            font-size: 15px;
+          }
+        }
+        // // padding-left: 8%;
+        // // margin-top: 22%;
+        // color: white;
+        // font-weight: 200;
+        // font-size: 20px;
+        // letter-spacing: 2px;
+      }
+    }
+  }
+
+  //...............................................end side nav bar start..................................
+
+  .contentContainer {
+    flex: 13;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    // background-color: red;
+
+    //...............................................top nav bar start..................................
+
+    .top-nav-bar {
+      margin-top: 0%;
+      // flex: 1;
+      // background-color: blue;
+      max-height: 30vh;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      
+
+      .navbar-toggle-button {
+
+        min-width: 56px;
+        height: 56px;
+        // border-left: 1px solid black;
+      }
+
+
+    }
+
+    .content {
+      flex: 9;
+      background-color: red;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
